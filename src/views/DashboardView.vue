@@ -61,10 +61,12 @@ onMounted(async () => {
                 <p class="fs-5 ms-2 my-3 fw-medium">Cryptocurrency</p>
               </div>
               <div class="p-2 d-flex">
-                <button type="button" class="btn btn-outline m-2" style="border-color: #cb0d9f;" @click="prevItems">
+                <button type="button" class="btn btn-outline m-2" style="border-color: #cb0d9f;" @click="prevItems"
+                  :disabled="coincap.isLoadingTable">
                   <IconChevronLeft class="mx-3" color="#cb0d9f" />
                 </button>
-                <button type="button" class="btn btn-outline m-2" style="border-color: #cb0d9f;" @click="nextItems">
+                <button type="button" class="btn btn-outline m-2" style="border-color: #cb0d9f;" @click="nextItems"
+                  :disabled="coincap.isLoadingTable">
                   <IconChevronRight class="mx-3" color="#cb0d9f" />
                 </button>
               </div>

@@ -12,11 +12,11 @@ const props = defineProps<{
     <div class="container">
       <div class="row">
         <div class="col-12 d-flex justify-content-between">
-          <div class="p-2 d-flex-inline">
+          <div class="px-2 pt-2 d-flex-inline">
             <p class="text-body-secondary pt-2 mb-0">{{ props.asset.name }}</p>
             <p class="fs-4 fw-semibold mt-0">$ {{ Number(props.asset.priceUsd).toFixed(2) }}</p>
           </div>
-          <div class="p-2">
+          <div class="px-2 pt-2 pb-0">
             <div class="card shadow-none pt-2" style="border: 0; background: ">
               <a class="nav-link active d-flex align-items-end text-reset" aria-current="page" href="/">
                 <div class="p-1 d-flex align-items-start align-self-center badge"
@@ -32,7 +32,7 @@ const props = defineProps<{
             Number(props.asset.changePercent24Hr).toFixed(2) }}
             %</span>
           <span class="fs-6 fw-semibold mt-0 text-danger" v-else>{{
-            Number(props.asset.changePercent24Hr).toFixed(2) }}
+            Number(props.asset.changePercent24Hr).toFixed(2).split('-')[1] }}
             %</span>
         </div>
       </div>
