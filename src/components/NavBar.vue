@@ -27,6 +27,4 @@ function capitalizeFirstLetter(str: string) {
       </div>
     </div>
   </div>
-
-
 </template>
