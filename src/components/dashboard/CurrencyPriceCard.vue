@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { IconCash } from '@tabler/icons-vue';
+import type { Coincap } from '@/interface/coincap';
+
+const props = defineProps<{
+  asset: Coincap;
+}>();
 </script>
 
 <template>
@@ -8,8 +13,8 @@ import { IconCash } from '@tabler/icons-vue';
       <div class="row">
         <div class="col-12 d-flex justify-content-between">
           <div class="p-2 d-flex-inline">
-            <p class="text-body-secondary pt-2 mb-0">Bitcoin</p>
-            <p class="fs-4 fw-semibold mt-0">฿ 0.00</p>
+            <p class="text-body-secondary pt-2 mb-0">{{ props.asset.name }}</p>
+            <p class="fs-4 fw-semibold mt-0">$ {{ Number(props.asset.priceUsd).toFixed(2) }}</p>
           </div>
           <div class="p-2">
             <div class="card shadow-none pt-2" style="border: 0; background: ">
@@ -23,7 +28,12 @@ import { IconCash } from '@tabler/icons-vue';
           </div>
         </div>
         <div class="col-12 d-flex justify-content-start pb-3 ps-4">
-          <span class="fs-6 fw-semibold mt-0">1.32%</span>
+          <span class="fs-6 fw-semibold mt-0 text-success" v-if="Number(props.asset.changePercent24Hr) > 0">{{
+            Number(props.asset.changePercent24Hr).toFixed(2) }}
+            %</span>
+          <span class="fs-6 fw-semibold mt-0 text-danger" v-else>{{
+            Number(props.asset.changePercent24Hr).toFixed(2) }}
+            %</span>
         </div>
       </div>
     </div>

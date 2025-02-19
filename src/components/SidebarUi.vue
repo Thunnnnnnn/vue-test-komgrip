@@ -14,7 +14,7 @@ import { IconHome, IconMouse } from '@tabler/icons-vue';
     </div>
   </div>
 
-  <p class="logo-container">
+  <p class="logo-container mt-2 mb-3">
   </p>
 
   <div class="p-2">
