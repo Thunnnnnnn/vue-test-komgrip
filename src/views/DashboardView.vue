@@ -74,7 +74,7 @@ onMounted(async () => {
 
           </div>
           <div class="col-12">
-            <div v-if="!coincap.isLoadingTable">
+            <div v-if="!coincap.isLoadingTable" class="mb-3">
               <CurrencyPriceTable :assets="coincap.assets" :no="offset" />
             </div>
             <div v-else class="m-5">
