@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IconHome } from '@tabler/icons-vue';
+import { IconHome, IconMouse } from '@tabler/icons-vue';
 
 </script>
 
@@ -20,7 +20,7 @@ import { IconHome } from '@tabler/icons-vue';
   <div class="p-2">
 
     <ul class="nav flex-column">
-      <div class="card" v-if="$route.path === '/'">
+      <div class="card shadow-none" style="border: 0;" v-if="$route.path === '/'">
         <li class="nav-item">
           <a class="nav-link active d-flex align-items-end text-reset" aria-current="page" href="/">
             <div class="p-1 d-flex align-items-start align-self-center badge" style="background-color: #cb0d9f;">
@@ -33,12 +33,77 @@ import { IconHome } from '@tabler/icons-vue';
         </li>
       </div>
       <li class="nav-item" v-else>
-        <a class="nav-link active text-bg-white" aria-current="page" href="/">
+        <a class="nav-link active text-bg-white text-reset" aria-current="page" href="/">
           <IconHome></IconHome> Dashboard
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="test">Menu 1</a>
+      <div class="card" v-if="$route.path === '/menu1'">
+        <li class="nav-item">
+          <a class="nav-link active d-flex align-items-end text-reset" aria-current="page">
+            <div class="p-1 d-flex align-items-start align-self-center badge" style="background-color: #cb0d9f;">
+              <IconMouse />
+            </div>
+            <div class="d-flex align-items-start p-2 align-self-center">
+              Menu 1
+            </div>
+          </a>
+        </li>
+      </div>
+      <li class="nav-item" v-else>
+        <a class="nav-link active text-bg-white text-reset" aria-current="page" href="/menu1">
+          <IconMouse></IconMouse> Menu 1
+        </a>
+      </li>
+      <div class="card" v-if="$route.path === '/menu2'">
+        <li class="nav-item">
+          <a class="nav-link active d-flex align-items-end text-reset" aria-current="page">
+            <div class="p-1 d-flex align-items-start align-self-center badge" style="background-color: #cb0d9f;">
+              <IconMouse />
+            </div>
+            <div class="d-flex align-items-start p-2 align-self-center">
+              Menu 2
+            </div>
+          </a>
+        </li>
+      </div>
+      <li class="nav-item" v-else>
+        <a class="nav-link active text-bg-white text-reset" aria-current="page" href="/menu2">
+          <IconMouse></IconMouse> Menu 2
+        </a>
+      </li>
+      <div class="card" v-if="$route.path === '/menu3'">
+        <li class="nav-item">
+          <a class="nav-link active d-flex align-items-end text-reset" aria-current="page">
+            <div class="p-1 d-flex align-items-start align-self-center badge" style="background-color: #cb0d9f;">
+              <IconMouse />
+            </div>
+            <div class="d-flex align-items-start p-2 align-self-center">
+              Menu 3
+            </div>
+          </a>
+        </li>
+      </div>
+      <li class="nav-item" v-else>
+        <a class="nav-link active text-bg-white text-reset" aria-current="page" href="/menu3">
+          <IconMouse></IconMouse> Menu 3
+        </a>
+      </li>
+      <div class="card" v-if="$route.path === '/menu4'">
+        <li class="nav-item">
+          <a class="nav-link active d-flex align-items-end text-reset" aria-current="page">
+            <div class="p-1 d-flex align-items-start align-self-center badge" style="background-color: #cb0d9f;">
+              <IconMouse />
+            </div>
+            <div class="d-flex align-items-start p-2 align-self-center">
+              Menu 4
+            </div>
+          </a>
+        </li>
+      </div>
+      <li class="nav-item" v-else>
+        <a class="nav-link active text-bg-white text-reset" aria-current="page" href="/menu4">
+          <IconMouse></IconMouse> Menu 4
+        </a>
       </li>
     </ul>
   </div>

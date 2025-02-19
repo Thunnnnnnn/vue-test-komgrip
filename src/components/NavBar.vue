@@ -8,7 +8,7 @@ function capitalizeFirstLetter(str: string) {
 
 <template>
   <div class="row">
-    <div class="col-9">
+    <div class="col-10">
       <ol class="breadcrumb d-inline-flex mt-4 pt-2 mb-0 pb-1">
         <li class="breadcrumb-item active">Pages</li>
         <li class="breadcrumb-item">{{ $route.path !== '/' ? capitalizeFirstLetter($route.path.slice(1,
@@ -18,7 +18,7 @@ function capitalizeFirstLetter(str: string) {
       <p class="fs-5 fw-medium">{{ $route.path !== '/' ? capitalizeFirstLetter($route.path.slice(1, $route.path.length))
         : 'Dashboard' }}</p>
     </div>
-    <div class="col-3 mx-7 mt-4">
+    <div class="col-2 mx-7 mt-4">
       <div class="d-flex">
         <IconUserFilled size="24px" />
         <div class="ms-2">
